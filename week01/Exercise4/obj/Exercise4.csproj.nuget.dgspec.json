@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\cse210\\week01\\Exercise4\\Exercise4.csproj": {}
+    "c:\\cse210\\week01\\Exercise4\\Exercise4.csproj": {}
   },
   "projects": {
-    "C:\\cse210\\week01\\Exercise4\\Exercise4.csproj": {
+    "c:\\cse210\\week01\\Exercise4\\Exercise4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\cse210\\week01\\Exercise4\\Exercise4.csproj",
+        "projectUniqueName": "c:\\cse210\\week01\\Exercise4\\Exercise4.csproj",
         "projectName": "Exercise4",
-        "projectPath": "C:\\cse210\\week01\\Exercise4\\Exercise4.csproj",
+        "projectPath": "c:\\cse210\\week01\\Exercise4\\Exercise4.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\cse210\\week01\\Exercise4\\obj\\",
+        "outputPath": "c:\\cse210\\week01\\Exercise4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
