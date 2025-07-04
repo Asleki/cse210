@@ -1,4 +1,4 @@
-// Program.cs
+﻿// Program.cs
 // This program calculates a letter grade based on a percentage input
 // and includes logic for pass/fail and grade modifiers (+/-).
 
@@ -12,12 +12,23 @@ class Program
 
         // 1. Ask the user for their grade percentage
         Console.Write("Please enter your grade percentage: ");
-        string gradeInput = Console.ReadLine(); // Read the user's input as a string
+        // Read the user's input as a string. Console.ReadLine() can return null,
+        // so we handle that possibility to avoid warnings and potential errors.
+        string? gradeInput = Console.ReadLine(); 
 
-        // Convert the input string to an integer
-        // Use int.Parse() for simplicity, in a real application, you'd use int.TryParse()
-        // for more robust error handling if the user enters non-numeric data.
-        int gradePercentage = int.Parse(gradeInput);
+        int gradePercentage;
+        // Attempt to parse the input string into an integer.
+        // int.TryParse is safer than int.Parse as it doesn't throw an exception
+        // if the input is not a valid number or is null.
+        if (string.IsNullOrWhiteSpace(gradeInput) || !int.TryParse(gradeInput, out gradePercentage))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number for your grade percentage.");
+            // Exit the application if the input is invalid.
+            // In a more complex application, you might loop and ask again.
+            Console.WriteLine("\nPress any key to exit.");
+            Console.ReadLine(); // Changed from Console.ReadKey()
+            return; 
+        }
 
         // Create a variable to store the letter grade
         string letter = "";
@@ -100,6 +111,6 @@ class Program
 
         // Keep the console window open until a key is pressed
         Console.WriteLine("\nPress any key to exit.");
-        Console.ReadKey();
+        Console.ReadLine(); // Changed from Console.ReadKey()
     }
 }
